@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDepthFirstSearch", "Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSerialization", "TestSerialization\TestSerialization.csproj", "{840F9E21-B511-4576-9FF0-C1361B9A53CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSharpDSL", "GSharpDSL\GSharpDSL.csproj", "{015FBD57-1796-4AC0-954E-046589EA62A0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D0E52A9B-DFDA-4EC2-90C5-8C3BB41FE782} = {D0E52A9B-DFDA-4EC2-90C5-8C3BB41FE782}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +50,10 @@ Global
 		{840F9E21-B511-4576-9FF0-C1361B9A53CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{840F9E21-B511-4576-9FF0-C1361B9A53CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{840F9E21-B511-4576-9FF0-C1361B9A53CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{015FBD57-1796-4AC0-954E-046589EA62A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{015FBD57-1796-4AC0-954E-046589EA62A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{015FBD57-1796-4AC0-954E-046589EA62A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{015FBD57-1796-4AC0-954E-046589EA62A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
