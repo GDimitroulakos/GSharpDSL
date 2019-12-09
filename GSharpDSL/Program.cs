@@ -120,6 +120,11 @@ namespace GSharpDSL {
     class CAlgIO
     {
         private Algorithm father;
+        private Type m_nodeType;
+        private Type m_edgeType;
+        private Type m_graphType;
+        private Object m_key;
+        private CGraph m_graph;
 
         public CAlgIO(Algorithm father)
         {
@@ -128,8 +133,41 @@ namespace GSharpDSL {
 
         public CAlgIO NOTETYPE(Type type)
         {
-
+            m_nodeType = type;
             return this;
+        }
+
+        public CAlgIO EDGETYPE(Type type)
+        {
+            m_edgeType = type;
+            return this;
+        }
+
+        public CAlgIO GRAPHTYPE(Type type)
+        {
+            m_graphType = type;
+            return this;
+        }
+
+        public CAlgIO KEY(Object key)
+        {
+            m_key = key;
+            return this;
+        }
+
+        public CAlgIO GRAPH(CGraph graph)
+        {
+            m_graph = graph;
+            return this;
+        }
+
+        public Algorithm end()
+        {
+            Type unbound = typeof(CGraphQueryInfo<,,>);
+            Type closed = unbound.MakeGenericType(new Type[] {m_nodeType, m_edgeType, m_graphType});
+
+            object queryInfo = Activator.CreateInstance(closed,m_graph,m_key);
+            return father;
         }
     }
 
